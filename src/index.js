@@ -44,16 +44,15 @@ function renderCountryCard(country) {
 <h1 class="name-country">${name.official}</h1>
 </div>
 <div class="country-container">
-<p><p>Capital: </b>${capital}</p>
-<p><p>Population: </b>${population}</p>
-<p><p>Languages: </b>${Object.values(languages)}</p>
+<p><p>Capital: </p>${capital}</p>
+<p><p>Population: </p>${population}</p>
+<p><p>Languages: </p>${Object.values(languages)}</p>
 </div>
 `;
     })
     .join();
   countryInfo.innerHTML = markupCountry;
 }
-
 
 function getCountries(country) {
   if (country.length === 1) {
@@ -70,11 +69,9 @@ function getCountries(country) {
 }
 
 function refineRequestMessage() {
-  Notify.info('Too many matches found. Please enter a more specific name.', {
-  });
+  Notify.info('Too many matches found. Please enter a more specific name.', {});
 }
 
 function errorMessage() {
-  Notify.failure('Oops, there is no country with that name.', {
-  });
+  Notify.failure('Oops, there is no country with that name.', {});
 }
