@@ -58,7 +58,7 @@ function getCountries(country) {
   if (country.length === 1) {
     countriesList.innerHTML = '';
     renderCountryCard(country);
-  } else if (country.length >= 10) {
+  } else if  (country.length >= 2 && country.length <= 10) {
     countryInfo.innerHTML = '';
     renderCountries(country);
     refineRequestMessage();
