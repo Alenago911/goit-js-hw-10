@@ -62,7 +62,12 @@ function getCountries(country) {
     countryInfo.innerHTML = '';
     renderCountries(country);
     refineRequestMessage();
-  } else {
+  } 
+  else if (country.length > 10) {
+    refineRequestMessage();
+  }
+  
+  else {
     countryInfo.innerHTML = '';
     errorMessage();
   }
